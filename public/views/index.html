@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="News">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+    <!-- JS (Vendor) - jQuery --><script src="../vendor/jquery-2.2.4.min.js"></script>
+    <!-- JS (Vendor) - AngularJS--><script src="../vendor/angular.min.js"></script>
+    <!-- JS (Vendor) - AngularJS, ngRoute --><script src="../vendor/angular-route.min.js"></script>
+    <!-- JS (Vendor) - Bootstrap --><script src="../vendor/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <!-- Custom AngularJS App --><script src="../scripts/app.js"></script>
+    <!-- Custom AngularJS Controller (login) --><script src="../scripts/loginCtlr.js"></script>
+    <!-- Custom AngularJS Controller (home) --><script src="../scripts/homeCtlr.js"></script>
+    <!-- CSS (Custom) - Custom Stylesheet--><link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <!-- CSS (Vendor) - Bootstrap --><link rel="stylesheet" type="text/css" href="../vendor/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+
+    <!-- RSS -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        @import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+
+        #feedControl {
+            margin-top : 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width : 440px;
+            font-size: 12px;
+            color: #9CADD0;
+        }
+    </style>
+    <script type="text/javascript">
+        function load() {
+            var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
+            new GFdynamicFeedControl(feed, "feedControl");
+
+        }
+        google.load("feeds", "1");
+        google.setOnLoadCallback(load);
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div ng-view></div>
+</div>
+</body>
+</html>
