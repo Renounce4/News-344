@@ -1,7 +1,8 @@
 angular.module('News')
-    .service('DataService', function () {})
-    .controller('loginCtlr', ['$scope', 'dataService', '$location', function ($scope, dataService, $location) {
+    .controller('loginCtlr', ['$scope', '$location', function ($scope, $location) {
 
-        alert("who?");
+        $scope.login = function(usr, pass) {
+            alert("hi");
+        };
 
     }]);
