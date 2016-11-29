@@ -5,10 +5,10 @@ angular.module('News')
         $scope.sources = ["CNN", "BBC News", "ESPN", "People Magazine"];
 
         $scope.load = function () {
-            var cnnCheck = document.getElementById("CNN");
-            var bbcCheck = document.getElementById("BBC News");
-            var espnCheck = document.getElementById("ESPN");
-            var pmCheck = document.getElementById("People Magazine");
+            var cnnCheck = document.getElementById("CNN").value;
+            var bbcCheck = document.getElementById("BBC News").value;
+            var espnCheck = document.getElementById("ESPN").value;
+            var pmCheck = document.getElementById("People Magazine").value;
             var feeds = [];
             if(cnnCheck) {
                 feeds.append("http://rss.cnn.com/rss/edition_world.rss");

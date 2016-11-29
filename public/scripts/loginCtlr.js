@@ -1,8 +1,8 @@
 angular.module('News')
-    .controller('loginCtlr', ['$scope', '$location', function ($scope, $location) {
+    .controller('loginCtlr', ['$scope', '$window', function ($scope, $window) {
 
-        $scope.login = function(usr, pass) {
-            alert("hi");
+        $scope.login = function() {
+            $window.location.href = '/home.html';
         };
 
     }]);
